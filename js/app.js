@@ -6,7 +6,7 @@ document.getElementById("loginBtn").addEventListener("click", () => {
     "?client_id=5miflgkc4h2edf4h3408u77c36" +
     "&response_type=code" +
     "&scope=email+openid+profile" +
-    "&redirect_uri=https://xxelingexx.github.io/AREP-T7-Front";
+    "&redirect_uri=https://xxelingexx.github.io/AREP-T7-Front/profileCreator";
 });
 
 document.getElementById("signupBtn").addEventListener("click", () => {
