@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Home - Simplificado</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Inicio</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Explorar</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-text">Notificaciones</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">✉️</span>
+                    <span class="nav-text">Mensajes</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">Perfil</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Configuración</span>
+                </a>
+            </nav>
+            <button class="tweet-button">Twittear</button>
+        </aside>
+
+        <!-- Área central - Timeline -->
+        <main class="timeline">
+            <header class="timeline-header">
+                <h1>Inicio</h1>
+            </header>
+
+            <!-- Formulario para nuevo tweet -->
+            <div class="compose-tweet">
+                <div class="compose-avatar">
+                    <div class="avatar"></div>
+                </div>
+                <div class="compose-form">
+                    <textarea class="tweet-input" placeholder="¿Qué está pasando?" maxlength="140"></textarea>
+                    <div class="compose-actions">
+                        <div class="compose-icons">
+                            <button class="icon-button" title="Imagen">📷</button>
+                            <button class="icon-button" title="GIF">GIF</button>
+                            <button class="icon-button" title="Emoji">😊</button>
+                        </div>
+                        <div class="compose-submit">
+                            <span class="char-counter">140</span>
+                            <button class="tweet-submit-button">Twittear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de tweets simulados -->
+            <article class="tweet">
+                <div class="tweet-avatar">
+                    <div class="avatar"></div>
+                </div>
+                <div class="tweet-content">
+                    <div class="tweet-header">
+                        <span class="tweet-author">Usuario Ejemplo</span>
+                        <span class="tweet-username">@usuario</span>
+                        <span class="tweet-time">· 2h</span>
+                    </div>
+                    <p class="tweet-text">Este es un tweet de ejemplo para mostrar cómo se vería el timeline. ¡Hola
+                        mundo! 👋</p>
+                    <div class="tweet-actions">
+                        <button class="action-button">💬 <span>12</span></button>
+                        <button class="action-button">🔄 <span>3</span></button>
+                        <button class="action-button">❤️ <span>45</span></button>
+                        <button class="action-button">📤</button>
+                    </div>
+                </div>
+            </article>
+
+            
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside class="sidebar-right">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar en Twitter" class="search-input">
+            </div>
+
+            <div class="widget">
+                <h2 class="widget-title">Qué está pasando</h2>
+                <div class="trend-item">
+                    <div class="trend-category">Tendencia en Colombia</div>
+                    <div class="trend-name">#DesarrolloWeb</div>
+                    <div class="trend-tweets">12.5K Tweets</div>
+                </div>
+            </div>
+                
+
+            <div class="widget">
+                <h2 class="widget-title">A quién seguir</h2>
+                <div class="follow-item">
+                    <div class="follow-avatar">
+                        <div class="avatar small"></div>
+                    </div>
+                    <div class="follow-info">
+                        <div class="follow-name">Tech News</div>
+                        <div class="follow-username">@technews</div>
+                    </div>
+                    <button class="follow-button">Seguir</button>
+                </div>
+                
+                <a href="#" class="widget-link">Mostrar más</a>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

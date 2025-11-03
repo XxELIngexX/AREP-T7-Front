@@ -1,0 +1,251 @@
+:root {
+--primary-color: #1DA1F2;
+--bg-color: #f5f8fa;
+--border-color: #e1e8ed;
+--text-color: #14171a;
+--text-secondary: #657786;
+--white: #fff;
+}
+
+body {
+margin: 0;
+font-family: system-ui, sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+}
+
+.container {
+display: grid;
+grid-template-columns: 250px 1fr 300px;
+min-height: 100vh;
+}
+
+/* Sidebar izquierda */
+.sidebar-left {
+border-right: 1px solid var(--border-color);
+padding: 20px;
+}
+
+.sidebar-left .logo {
+font-size: 24px;
+color: var(--primary-color);
+margin-bottom: 20px;
+}
+
+.sidebar-left ul {
+list-style: none;
+padding: 0;
+}
+
+.sidebar-left li {
+margin: 15px 0;
+}
+
+.sidebar-left a {
+text-decoration: none;
+color: var(--text-color);
+font-weight: 500;
+}
+
+.sidebar-left a:hover {
+color: var(--primary-color);
+}
+
+/* Perfil */
+.profile {
+background-color: var(--white);
+border-left: 1px solid var(--border-color);
+border-right: 1px solid var(--border-color);
+min-height: 100vh;
+}
+
+/* Header del usuario */
+.user-header {
+position: relative;
+}
+
+.cover-photo {
+height: 200px;
+background: linear-gradient(135deg, var(--primary-color), #0d8ce8);
+border-bottom: 1px solid var(--border-color);
+}
+
+.user-info {
+padding: 20px;
+position: relative;
+}
+
+.avatar-large {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+background: linear-gradient(135deg, #667eea, #764ba2);
+border: 4px solid white;
+position: absolute;
+top: -60px;
+left: 20px;
+}
+
+.user-meta {
+margin-top: 70px;
+margin-left: 150px;
+}
+
+.user-name {
+font-size: 22px;
+font-weight: 700;
+}
+
+.user-username {
+color: var(--text-secondary);
+font-size: 15px;
+}
+
+.user-bio {
+margin: 10px 0;
+font-size: 15px;
+}
+
+.user-stats {
+display: flex;
+gap: 15px;
+margin-bottom: 10px;
+}
+
+.user-stats span {
+color: var(--text-secondary);
+font-size: 14px;
+}
+
+.user-stats strong {
+color: var(--text-color);
+}
+
+.edit-profile-btn {
+background-color: var(--primary-color);
+color: white;
+border: none;
+border-radius: 20px;
+padding: 6px 14px;
+cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+background-color: #0d8ce8;
+}
+
+/* Nueva publicación */
+.new-post {
+padding: 15px 20px;
+border-top: 1px solid var(--border-color);
+border-bottom: 1px solid var(--border-color);
+}
+
+.new-post textarea {
+width: 100%;
+border: none;
+outline: none;
+resize: none;
+font-size: 15px;
+padding: 10px;
+border-radius: 10px;
+background-color: var(--bg-color);
+}
+
+.new-post .post-btn {
+margin-top: 10px;
+float: right;
+background-color: var(--primary-color);
+color: white;
+border: none;
+border-radius: 20px;
+padding: 6px 14px;
+cursor: pointer;
+}
+
+.new-post .post-btn:hover {
+background-color: #0d8ce8;
+}
+
+/* Posts */
+.user-posts {
+padding: 20px;
+}
+
+.user-posts h2 {
+font-size: 18px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.post {
+display: flex;
+gap: 15px;
+padding: 15px 0;
+border-bottom: 1px solid var(--border-color);
+}
+
+.post-avatar .avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.post-content {
+flex: 1;
+}
+
+.post-header {
+display: flex;
+gap: 10px;
+align-items: center;
+margin-bottom: 5px;
+}
+
+.post-author {
+font-weight: 700;
+}
+
+.post-username {
+color: var(--text-secondary);
+font-size: 13px;
+}
+
+.post-text {
+font-size: 14px;
+}
+
+/* Botones de interacción */
+.post-actions {
+display: flex;
+gap: 15px;
+margin-top: 5px;
+}
+
+.post-actions button {
+border: none;
+background: none;
+color: var(--text-secondary);
+cursor: pointer;
+font-size: 13px;
+}
+
+.post-actions button:hover {
+color: var(--primary-color);
+}
+
+/* Responsive básico */
+@media (max-width: 1024px) {
+.container {
+grid-template-columns: 1fr;
+}
+.sidebar-left,
+.profile {
+border: none;
+}
+.user-meta {
+margin-left: 0;
+margin-top: 10px;
+}
+}

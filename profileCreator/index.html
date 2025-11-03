@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Perfil - Twitter Clone</title>
+    <link href="/css/profileCreator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-creator-card">
+            <!-- Header -->
+            <div class="creator-header">
+                <div class="logo">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <h1>Crea tu perfil</h1>
+                <p class="subtitle">Completa tu información para comenzar</p>
+            </div>
+
+            <!-- Formulario -->
+            <form id="profileCreatorForm" class="creator-form">
+                <!-- Avatar Preview -->
+                <div class="avatar-section">
+                    <div class="avatar-preview" id="avatarPreview">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="avatar-actions">
+                        <label for="avatarUpload" class="avatar-upload-label">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Cambiar foto</span>
+                        </label>
+                        <input type="file" id="avatarUpload" accept="image/*" hidden>
+                    </div>
+                </div>
+
+                <!-- Campo: Nombre completo (desde Cognito) -->
+                <div class="form-group">
+                    <label for="displayName" class="form-label">
+                        <i class="fa-solid fa-user"></i>
+                        Nombre completo
+                    </label>
+                    <input 
+                        type="text" 
+                        id="displayName" 
+                        name="displayName" 
+                        class="form-input"
+                        placeholder="Tu nombre completo"
+                    >
+                    <small class="form-help">Obtenido de tu cuenta</small>
+                </div>
+
+                <!-- Campo: Email (desde Cognito) -->
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        <i class="fa-solid fa-envelope"></i>
+                        Correo electrónico
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input"
+                        placeholder="tu@email.com"
+                        readonly
+                    >
+                    <small class="form-help">Obtenido de tu cuenta</small>
+                </div>
+
+                <!-- Campo: Username (editable) -->
+                <div class="form-group">
+                    <label for="username" class="form-label">
+                        <i class="fa-solid fa-at"></i>
+                        Nombre de usuario
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        class="form-input"
+                        placeholder="@tunombredeusuario"
+                        maxlength="30"
+                        required
+                    >
+                    <small class="form-help">
+                        <span id="usernameCounter">0/30</span>
+                        <span id="usernameAvailable" class="availability-status"></span>
+                    </small>
+                </div>
+
+                <!-- Campo: Biografía (editable) -->
+                <div class="form-group">
+                    <label for="bio" class="form-label">
+                        <i class="fa-solid fa-pen"></i>
+                        Biografía
+                    </label>
+                    <textarea 
+                        id="bio" 
+                        name="bio" 
+                        class="form-textarea"
+                        placeholder="Cuéntanos sobre ti..."
+                        maxlength="280"
+                        rows="4"
+                    ></textarea>
+                    <small class="form-help">
+                        <span id="bioCounter">0/280</span>
+                    </small>
+                </div>
+
+                <!-- Campos adicionales opcionales -->
+                <div class="form-group">
+                    <label for="location" class="form-label">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ubicación (opcional)
+                    </label>
+                    <input 
+                        type="text" 
+                        id="location" 
+                        name="location" 
+                        class="form-input"
+                        placeholder="Ciudad, País"
+                        maxlength="50"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="website" class="form-label">
+                        <i class="fa-solid fa-link"></i>
+                        Sitio web (opcional)
+                    </label>
+                    <input 
+                        type="url" 
+                        id="website" 
+                        name="website" 
+                        class="form-input"
+                        placeholder="https://tusitio.com"
+                    >
+                </div>
+
+                <!-- Loading y Error -->
+                <div id="loadingMessage" class="loading-message" style="display: none;">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span>Cargando información...</span>
+                </div>
+
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="form-actions">
+                    <button type="button" id="cancelButton" class="btn-secondary">
+                        Cancelar
+                    </button>
+                    <button type="submit" id="submitButton" class="btn-primary" disabled>
+                        <i class="fa-solid fa-check"></i>
+                        Crear perfil
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- AWS Cognito SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+    <script src="https://unpkg.com/amazon-cognito-identity-js@6.3.6/dist/amazon-cognito-identity.min.js"></script>
+    
+    <script src="/js/profileCreator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - MicroTweet</title>
+<link rel="stylesheet" href="/css/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar izquierda -->
+    <aside class="sidebar-left">
+      <div class="logo">
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li><a href="#"><i class="fa-solid fa-user"></i> Perfil</a></li>
+          <li><a href="#"><i class="fa-solid fa-hashtag"></i> Explorar</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i> Configuración</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="profile">
+
+      <!-- Encabezado del perfil -->
+      <header class="user-header">
+        <div class="cover-photo"></div>
+        <div class="user-info">
+          <div class="avatar-large"></div>
+          <div class="user-meta">
+          </div>
+        </div>
+      </header>
+
+      <!-- Sección de publicar nuevo post -->
+      <section class="new-post">
+<textarea id="post-content" maxlength="140" placeholder="¿Qué estás pensando hoy?"></textarea>
+        <button id="post-btn" class="post-btn">Publicar</button>
+      </section>
+
+      <!-- Lista de posts del usuario -->
+      <section class="user-posts">
+        <h2>Mis publicaciones</h2>
+
+        
+        <div id="posts-container">
+    <!-- Aquí van los posts generados por JS -->
+  </div>
+
+      </section>
+
+    </main>
+
+    <!-- Sidebar derecha -->
+    <aside class="sidebar-right">
+      <div class="search-box">
+        <input type="text" placeholder="Buscar usuarios o posts">
+      </div>
+      <div class="trends">
+        <h3>Tendencias</h3>
+        <ul>
+          <li>#Java</li>
+          <li>#SpringBoot</li>
+          <li>#CaféYLíneasDeCódigo</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+<script src="/js/profile.js"></script>
+</body>
+</html>
