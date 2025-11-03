@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = 'https://ec2-54-196-207-55.compute-1.amazonaws.com/api';
+const API_BASE_URL = 'https://ec2-54-196-207-55.compute-1.amazonaws.com:8080/api';
 
 // IDs simulados (en producción vendrían de un sistema de autenticación)
 let currentUserId = null;

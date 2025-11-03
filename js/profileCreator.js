@@ -1,4 +1,4 @@
-const BASE_URL = "https://ec2-54-196-207-55.compute-1.amazonaws.com";
+const BASE_URL = "https://ec2-54-196-207-55.compute-1.amazonaws.com:8080";
 let access_token = null;
 let id_token = null;
 
