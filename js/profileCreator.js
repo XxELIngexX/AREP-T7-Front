@@ -1,4 +1,4 @@
-const BASE_URL = "https://ec2-54-196-207-55.compute-1.amazonaws.com:8080";
+const BASE_URL = "http://ec2-54-196-207-55.compute-1.amazonaws.com:8080";
 let access_token = null;
 let id_token = null;
 
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Código OAuth recibido:", code);
 
     // Llamas al backend para intercambiar code por tokens
-    await fetch(`https://ec2-54-196-207-55.compute-1.amazonaws.com:8080/auth/callback?code=${code}&state=${state}`)
+    await fetch(`http://ec2-54-196-207-55.compute-1.amazonaws.com:8080/auth/callback?code=${code}&state=${state}`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
