@@ -1,4 +1,4 @@
-const BASE_URL = "http://ec2-54-196-207-55.compute-1.amazonaws.com";
+const BASE_URL = "https://ec2-54-196-207-55.compute-1.amazonaws.com";
 let user = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
